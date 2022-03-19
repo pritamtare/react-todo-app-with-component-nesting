@@ -1,0 +1,31 @@
+.App {
+  font-family: sans-serif;
+  /* text-align: center; */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-comps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invalid {
+  border: red 2px solid;
+}
+
+.add-work-item {
+  border: none;
+  color: #f7f7f7;
+  padding: 0.6rem 1.5rem;
+  background-color: #5a0f4e;
+  margin-left: 1rem;
+}
+
+.delete-work-btn {
+  background-color: #fdeefc;
+  padding: 0.6rem 1.5rem;
+  color: #5a0f4e;
+  border: none;
+}
