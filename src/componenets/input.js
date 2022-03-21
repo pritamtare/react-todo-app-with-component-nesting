@@ -7,7 +7,7 @@ const Input = styled.input`
   padding: 0.5rem 1rem;
 `;
 
-const InputComp = ({ value, onChange, onFocus, isValid }) => {
+const InputComp = ({ value, onChange, onFocus, isValid,onKeyDown }) => {
   return (
     <div>
       <Input
@@ -18,6 +18,7 @@ const InputComp = ({ value, onChange, onFocus, isValid }) => {
         onChange={onChange}
         placeholder="Add Work Item Here"
         onFocus={onFocus}
+        onKeyDown={onKeyDown}
       />
     </div>
   );

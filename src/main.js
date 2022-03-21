@@ -49,11 +49,27 @@ const Main = () => {
     });
   };
 
+  const onKeyDown = (e) => {
+    
+    if(e.keyCode===13){
+      
+    if (workItem.title === "") {
+      setIsValid(false);
+      return false;
+    }
+    setWorkData([...workData, workItem]);
+
+    setWorkItem({
+      title: "",
+      id: ""
+    });
+  }
+  };
+
   const handleInputFocus = () => {
     setIsValid(true);
   };
   const handleDeleteItem = (e, i) => {
-    debugger;
     let updated = workData?.filter((event, index) => i !== index);
     setWorkData(updated);
   };
@@ -82,6 +98,7 @@ const Main = () => {
           onChange={handleWorkChange}
           value={workItem}
           onFocus={handleInputFocus}
+          onKeyDown={onKeyDown}
         />
         <ButtonComp
           children="Add Work Item"
