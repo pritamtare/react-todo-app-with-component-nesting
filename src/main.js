@@ -36,6 +36,10 @@ const Main = () => {
     setWorkItem({ title: e.target.value, id: Math.random() * 0.5 });
   };
 
+  console.log(workData.length)
+  
+  const noDataFound = <div className="noDataFound"><h3>No Work Items Found. Would You Like To Add Work Items?</h3> </div>
+
   const handleAddWorkItem = () => {
     if (workItem.title === "") {
       setIsValid(false);
@@ -107,7 +111,10 @@ const Main = () => {
         />
       </div>
       {!isValid && <ErrorComp />}
-      <WorkListComp lsit={lsit} />
+      {
+        workData.length === 0? noDataFound: <WorkListComp lsit={lsit} />
+      }
+      
     </div>
   );
 };
