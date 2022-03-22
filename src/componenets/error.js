@@ -6,7 +6,7 @@ const Error = styled.p`
   color: red;
   width: 319px;
   padding: 0.7rem 1rem;
-  background-color: #fdeefc;
+  background-color: #eee;
   margin: 1rem auto;
 `;
 const ErrorComp = () => {

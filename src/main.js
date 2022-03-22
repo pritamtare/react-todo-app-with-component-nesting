@@ -35,10 +35,8 @@ const Main = () => {
   const handleWorkChange = (e) => {
     setWorkItem({ title: e.target.value, id: Math.random() * 0.5 });
   };
-
-  console.log(workData.length)
   
-  const noDataFound = <div className="noDataFound"><h3>No Work Items Found. Would You Like To Add Work Items?</h3> </div>
+  const noDataFound = <div className="noDataFound"><h3>No Work Items Found.</h3> </div>
 
   const handleAddWorkItem = () => {
     if (workItem.title === "") {
